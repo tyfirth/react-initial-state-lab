@@ -3,7 +3,7 @@ import React from 'react';
 
 class Bomb extends React.Component{
 
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
@@ -12,10 +12,10 @@ class Bomb extends React.Component{
   }
 
   render(){
-    const message = this.state.secondsLeft === 0 ? "Boom!" : `${this.state.secondsLeft} before I go boom!`;
+    const message = this.state.secondsLeft === 0 ? "Boom!" : `${this.state.secondsLeft} seconds left before I go boom!`;
 
     return(
-      <div> {message} </div>
+      <div>{message}</div>
     )
   }
 
